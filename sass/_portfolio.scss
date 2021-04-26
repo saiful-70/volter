@@ -1,0 +1,123 @@
+.portfolio {
+    background-color: $color-grey-dark;
+    padding: 10rem 0;
+    @include responsive(large-medium) {
+        padding: 5rem 0;
+    }
+    @include responsive(small-medium) {
+        padding: 3rem 0;
+    }
+
+    &__intro {
+        padding: 0 5rem;
+        @include responsive(medium) {
+            width: 60%;
+            text-align: center;
+        }
+    }
+
+    &__menu {
+        align-self: flex-end;
+        @include responsive(medium) {
+            justify-content: center;
+        }
+        
+        a:link,
+        a:visited {
+            color: $color-grey-light;
+        }
+
+        a:hover,
+        a:active {
+            color: $color-white;
+        }
+    }
+
+    &__gallery {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+
+        &--img {
+            max-width: auto;
+            height: 30rem;
+            overflow: hidden;
+
+        @include responsive(large) {
+            height: 25rem;
+        }
+        @include responsive(medium-large) {
+            height: 21rem;
+        }
+        @include responsive(medium) {
+            height: 18rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+            @include responsive(medium-large) {
+                margin-right: .5rem;
+            }
+            @include responsive(medium) {
+                margin-right: .2rem;
+            }
+        }
+
+        // &-1,&--2,&-3,&-4,&-5 {
+        //     display: block;
+        //     width: 100%;
+        // }
+
+
+
+        &-1,&-5 {
+            @include responsive(medium) {
+                display: none;
+                margin: 0;
+            }
+            }
+
+        // &-2,
+        // &-3,
+        // &-4 {
+        //     z-index: 5;
+        // position: relative;
+
+        //     &::before {
+        //         content: '';
+        //         font-size: 1.2rem;
+        //         display: block;
+        //         position: absolute;
+        //         left: 0;
+        //         top: 5%;
+        //         padding: 1rem 1.5rem;
+        //         background-color: $color-primary;
+        //         z-index: 10;
+        //     }
+        // }
+        }
+    }
+
+    &__link {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: space-around;
+
+        // &--prev,
+        // &--next {
+        //     &:link,
+        //     &:visited {
+        //         text-decoration: none;
+        //         color: $color-grey-light;
+        //         font-weight: 600;
+        //         transition: .3s;
+        //     }
+
+        //     &:hover,
+        //     &:active {
+        //         color: $color-white;
+        //     }
+        // }
+    }
+}

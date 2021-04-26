@@ -1,0 +1,301 @@
+.skill {
+    padding: 10rem 0;
+    @include responsive(large) {
+        padding: 7rem 0;
+    }
+    @include responsive(medium-large) {
+        padding: 5rem 0;
+    }
+    @include responsive(small-medium) {
+        padding: 3rem 0;
+    }
+    background-color: $color-grey-dark;
+
+    &__intro {
+        width: 50%;
+        text-align: center;
+        margin-left: 25%;
+        margin-bottom: 5rem;
+        @include responsive(large) {
+            margin-bottom: 2rem;
+        }
+
+        @include responsive(medium) {
+            width: 70%;
+            margin-left: 15%;
+        }
+    }
+
+    &__main {
+
+        &-row {
+            margin-top: 8rem;
+            @include responsive(large) {
+                margin-top: 5rem;
+            }
+            @include responsive(medium-large) {
+                // margin-top: 3rem;
+            }
+        }
+        
+        &-row:first-child &-image--3 {
+            background-color: $color-white-1;
+        }
+
+        &-image {
+            position: relative;
+            @include responsive(medium) {
+                right: 9rem;
+                top: -6rem;
+            }
+
+            &--1 {
+                position: absolute;
+                height: 25rem;
+                width: 25rem;
+
+                top: 6.5rem;
+                right: 6.5rem;
+
+                @include responsive(medium) {
+                    height: 20rem;
+                    width: 20rem;
+
+                    top: 6.5rem;
+                    right: 6.5rem;
+                }
+            }
+
+            &--2 {
+                position: absolute;
+                height: 25rem;
+                width: 25rem;
+                
+                border: 1px solid $color-grey-light;
+
+                top: 4.5rem;
+                right: 4.5rem;
+                @include responsive(medium) {
+                    height: 20rem;
+                    width: 20rem;
+
+                    top: 4.5rem;
+                    right: 4.5rem;
+                }
+            }
+
+            &--3{
+                position: absolute;
+                height: 15rem;
+                width: 15rem;
+                // z-index: 10;
+
+                top: 0;
+                right: 0;
+                background-color: #000;
+
+                @include responsive(medium) {
+                    height: 15rem;
+                    width: 15rem;
+
+                    top: 3.5rem;
+                    right: 3.5rem;
+                }
+
+                img {
+                    height: 10rem;
+                    width: auto;
+                    position: absolute;
+                    // z-index: 10;
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        &-description {
+            padding: 0 4rem;
+            z-index: 10;
+
+            margin-bottom: 5rem;
+            @include responsive(medium) {
+                padding: 23rem 7.5rem 0 7.55rem;
+            }
+            @include responsive(small) {
+                padding: 23rem 5rem 0 5rem;
+            }
+        }
+
+        &--first {
+                @include responsive(medium) {
+                    margin-top: 15rem;
+                }
+
+                &-image {
+                    position: relative;
+                    @include responsive(medium) {
+                        right: 9rem;
+                        top: -8rem;
+                    }
+
+                    &--1 {
+                        position: absolute;
+                        top: 0;
+                        right: 7.5rem;
+                        height: 25rem;
+                        width: 25rem;
+                        background-color: #2C2C2C;
+
+                        @include responsive(medium) {
+                            top: 0;
+                            right: 7.5rem;
+                            height: 20rem;
+                            width: 20rem;
+                        }
+                    }
+    
+                    &--2 {
+                        position: absolute;
+                        height: 25rem;
+                        width: 25rem;
+                        
+                        border: 1px solid $color-grey-light;
+
+                        top: 2rem;
+                        right: 5rem;
+                        @include responsive(medium) {
+                            top: 2rem;
+                            right: 5rem;
+                            height: 20rem;
+                            width: 20rem;
+                        }
+                    }
+    
+                    &--3 {
+                        position: absolute;
+                        height: 25rem;
+                        width: 25rem;
+                        
+                        border: 1px solid $color-grey-light;
+
+                        top: 6.5rem;
+                        right: 0;
+
+                        @include responsive(medium) {
+                            top: 6.5rem;
+                            right: 0;
+                            height: 20rem;
+                            width: 20rem;
+                        }
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+    
+                    &--4 {
+                        position: absolute;
+                        top: 9rem;
+                        right: 9rem;
+                        height: 10rem;
+                        width: 10rem;
+                        @include responsive(medium) {
+                            top: 9rem;
+                            right: 9rem;
+                            height: 5rem;
+                            width: 5rem;
+                        }
+                    }
+                }
+        }
+
+
+        &--middle {
+            text-align: right;
+            padding-right: 2rem;
+
+            &-image {
+                position: relative;
+                @include responsive(medium) {
+                    left: 6rem;
+                    top: -64rem;
+                }
+                @include responsive(small) {
+                    left: 6rem;
+                    top: -66rem;
+                }
+    
+                &--1 {
+                    position: absolute;
+                    height: 25rem;
+                    width: 25rem;
+    
+                    top: 6.5rem;
+                    left: 6.5rem;
+                    @include responsive(medium) {
+                        height: 20rem;
+                        width: 20rem;
+    
+                        top: 6.5rem;
+                        left: 6.5rem;
+                    }
+                }
+    
+                &--2 {
+                    position: absolute;
+                    height: 25rem;
+                    width: 25rem;
+                    
+                    border: 1px solid $color-grey-light;
+    
+                    top: 4.5rem;
+                    left: 4.5rem;
+                    @include responsive(medium) {
+                        height: 20rem;
+                        width: 20rem;
+    
+                        top: 4.5rem;
+                        left: 4.5rem;
+                    }
+                }
+    
+                &--3{
+                    position: absolute;
+                    height: 15rem;
+                    width: 15rem;
+                    // z-index: 10;
+    
+                    top: 0;
+                    left: 0;
+                    background-color: #000;
+                    @include responsive(medium) {
+                        height: 15rem;
+                        width: 15rem;
+    
+                        top: 3.5rem;
+                        left: 3.5rem;
+                    }
+    
+                    img {
+                        height: 10rem;
+                        width: auto;
+                        position: absolute;
+                        // z-index: 10;
+                        top: 50%;
+                        left: 50%;
+    
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    &--number {
+        color: $color-grey-light;
+    }
+}

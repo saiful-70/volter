@@ -1,0 +1,58 @@
+.work {
+    background-color: $color-black;
+    background-image: url(../img/work-back.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 10rem 0;
+    @include responsive(medium-large) {
+        padding: 5rem 0;
+    }
+    @include responsive(small-medium) {
+        padding: 3rem 0;
+    }
+
+    &__content {
+        margin-left: 50%;
+        @include responsive(medium-large) {
+            margin-left: 47%;
+        }
+        @include responsive(medium) {
+            margin-left: 30%;
+            padding-right: 2rem;
+        }
+        @include responsive(small) {
+            margin-left: 0;
+            padding: 2rem 5rem;
+        }
+
+        &--description {
+            font-size: 1.1rem;
+            font-weight: 300;
+            // letter-spacing: 1px;
+        }
+
+        &--number {
+            // padding: 0;
+            // margin: 0;
+            font-weight: 700;
+            font-size: 7rem;
+            &::first-letter {
+                float: left;
+            font-size: 4em;
+            line-height: 1;
+            margin: .125em .25em;
+            }
+
+            @include responsive(medium) {
+                font-size: 5rem;
+            }
+            @include responsive(small) {
+                font-size: 4rem;
+            }
+            color: $color-grey-light;
+        }
+
+    }
+}

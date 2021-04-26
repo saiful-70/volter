@@ -1,0 +1,98 @@
+// variables
+$color-primary: #bb9b1d;
+$color-primary-dark: #8b7107;
+
+$color-grey-light: #555555;
+$color-grey: #282828;
+$color-grey-dark: #1D1D1D;
+
+$color-white: #fff;
+$color-white-1: rgb(180, 179, 179);
+$color-black: #000;
+$color-black-2: #2C2C2C;
+$color-black-3: #1F1F1F;
+$color-black-4: #131313;
+
+
+
+
+//mixins
+@mixin btn-simple {
+
+    &:link,
+    &:visited {
+        text-decoration: none;
+    // padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: $color-grey-light;
+    text-transform: uppercase;
+
+    position: relative;
+    transition: all .3s;
+    }
+
+    &:hover,
+    &:after {
+        color: $color-white;
+    }
+    
+}
+
+@mixin btn-before-after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 1px;
+        width: 3rem;
+        background-color: $color-grey-light;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == x-small {
+        @media only screen and (max-width: 400px) { @content };
+    }
+    @if $breakpoint == small {
+        @media only screen and (max-width: 640px) { @content };
+    }
+    @if $breakpoint == small-medium {
+        @media only screen and (max-width: 750px) { @content };
+    }
+    @if $breakpoint == medium {
+        @media only screen and (max-width: 900px) { @content };
+    }
+    @if $breakpoint == medium-large {
+        @media only screen and (max-width: 1050px) { @content };
+    }
+    @if $breakpoint == large {
+        @media only screen and (max-width: 1200px) { @content }; 
+    }
+    @if $breakpoint == x-large {
+        @media only screen and (min-width: 1201px) { @content };
+    }
+}
+
+
+//animations
+@keyframes leftToRight {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .25;
+    }
+
+    50% {
+        opacity: .5;
+    }
+
+    90% {
+        left: 3%;
+    }
+
+    100% {
+        left: 0;
+    }
+}

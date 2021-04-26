@@ -1,0 +1,204 @@
+.header {
+    height: 100vh;
+    @include responsive(medium-large) {
+        height: 90vh;
+    }
+    position: relative;
+
+    background-image: url(../img/hero-back-1.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: none;
+    background-color: #000;
+
+    &__menu {
+        @include responsive(medium) {
+            display: none;
+        }
+    }
+
+    &__menu-icon {
+        position: absolute;
+        top: 70px;
+        right: 40px;
+        cursor: pointer;
+        z-index: 100;
+        display: none;
+        @include responsive(medium) {
+            display: inline-block;
+        }
+        transition: all 0.5s;
+
+        &:active >div{
+            background-color: $color-primary;
+        }
+
+        > div {
+            height: 3px;
+            width: 3rem;
+            background-color: $color-white;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    &__mobile-menu {
+        width: 100vw;
+        height: 100vh;
+        background-color: $color-black-3;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 50;
+        overflow: hidden;
+        transition: all .5s;
+
+
+        .menu__item {
+            margin: 0;
+            
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &--link {
+
+            font-size: 2rem;
+            color: $color-grey-light;
+
+            &:hover, &:active {
+                color: $color-white;
+            }
+            }
+        }
+    }
+}
+
+
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    padding: 5rem 2rem 0 2rem;
+    position: relative;
+    z-index: 20;
+}
+
+//hero styles
+.hero-img {
+    height: auto;
+    width: 69.7rem;
+    position: absolute;
+    left: 33%;
+    top: 47.2%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    @include responsive(large) {
+        width: 76rem;
+    }
+    @include responsive(medium-large) {
+        width: 68.5rem;
+    }
+    @include responsive(x-large) {
+        width: 63.7rem;
+        left: 36%;
+    }
+
+    img {
+        width: 100%
+    }
+}
+
+.hero {
+    height: 70vh;
+    margin-top: 4.5rem;
+    position: relative;
+
+    &-right {
+        z-index: 15;
+        position: absolute;
+        top: 47%;
+        left: 64%;
+        @include responsive(large) {
+            left: 65%;
+        }
+        transform: translate(-50%,-50%);
+
+        &__intro {
+            font-size: .8rem;
+            font-weight: 600;
+            letter-spacing: .3rem;
+            @include responsive(large) {
+                letter-spacing: 2px;
+            }
+        }
+
+        &__heading {
+            font-size: 6rem;
+            @include responsive(medium-large) {
+                font-size: 5rem;
+            }
+            // @include responsive(medium) {
+            //     font-size: 4.5rem;
+            // }
+            font-weight: 700;
+            line-height: 1;
+            position: relative;
+                z-index: 5;
+
+            &--studio {
+                position: relative;
+                z-index: 5;
+            }
+        }
+
+        &__description {
+            font-size: 1.1rem;
+            // width: 75%;
+            line-height:1.2;
+        }
+    }
+
+    &__contact {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+
+        @include responsive(medium) {
+            top: 95%;
+            left: 5%;
+        }
+        // left: 1%;
+        width: 10rem;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: $color-grey-light;
+            font-weight: 600;
+
+            transition: all 0.3s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-white;
+        }
+
+        &--text {
+            position: absolute;
+            transform: rotate(-90deg);
+            @include responsive(medium) {
+                transform: rotate(0);
+            }
+        }
+    }
+}
